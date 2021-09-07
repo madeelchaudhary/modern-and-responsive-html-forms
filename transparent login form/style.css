@@ -1,0 +1,118 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url("bg.jpg") no-repeat center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_form {
+  background: #1a1e719a;
+
+  color: white;
+  padding: 2rem;
+
+  border-radius: 0.5rem;
+
+  min-width: 450px;
+  max-width: 650px;
+  width: 50%;
+}
+
+.form_title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.input_group {
+  display: flex;
+
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+
+  font-size: 1.5rem;
+}
+
+.input_group label {
+  margin-bottom: 0.3rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.input_group input {
+  min-width: 330px;
+  background: #0c23407e;
+  border: none;
+  outline: none;
+
+  text-align: center;
+  color: white;
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1.5px solid #333;
+
+  transition: opacity 0.5s ease-in-out;
+}
+
+.input_group input:focus {
+  opacity: 0.8;
+}
+
+.login_form button {
+  padding: 0.85rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.12rem;
+  width: 100%;
+  cursor: pointer;
+
+  color: white;
+  background-color: #1e2952;
+  border: 0.2rem solid #695acd79;
+  border-radius: 0.3rem;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.login_form button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 540px) {
+  .login_form {
+    min-width: auto;
+    width: 85%;
+  }
+  .form_title {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+  }
+  .input_group {
+    font-size: 1.1rem;
+  }
+  .input_group input {
+    padding: 0.6rem;
+    width: 100%;
+    min-width: auto;
+  }
+  .login_form button {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+}

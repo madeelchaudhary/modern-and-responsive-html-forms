@@ -1,0 +1,155 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  background: url("bg.jfif") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transparent-form {
+  width: 55%;
+  min-width: 350px;
+  max-width: 620px;
+  min-height: 65%;
+  height: fit-content;
+  padding: 3rem 1rem;
+  border-radius: 0.8rem;
+  background: #e0e0e0c5;
+  box-shadow: 0 0 40px 0.5rem #cfcfcf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form_title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.transparent-form form {
+  width: 90%;
+  margin-top: 2rem;
+}
+
+.input_group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input_group input {
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 2px solid #b29f94;
+  background: #bebebe7c;
+  color: rgb(90, 83, 83);
+
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.input_group label {
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.input_group input:focus {
+  box-shadow: 0 0 24px #eee;
+  opacity: 0.8;
+}
+.input_group input::placeholder {
+  color: grey;
+  font-weight: normal;
+}
+
+.transparent-form button {
+  width: 100%;
+  padding: 1.2rem;
+  margin: 1rem 0;
+
+  color: #eee;
+  background-color: silver;
+  border: 2px solid #60381385;
+  border-radius: 0.5rem;
+  outline: none;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.transparent-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 0.5rem;
+  background: darkseagreen;
+  transform: scaleX(0);
+  transition: all 0.9s ease-in-out, transform 0.7s ease;
+  transform-origin: left;
+  z-index: -1;
+}
+
+.transparent-form button:hover::before {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 768px) {
+  .transparent-form {
+    width: 85%;
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 14px;
+  }
+  .transparent-form {
+    min-width: auto;
+  }
+
+  .input_group input {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .transparent-form button {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}

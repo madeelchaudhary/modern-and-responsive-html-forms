@@ -1,0 +1,212 @@
+/* @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-font: "Lato", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url("bg.jpg") no-repeat center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 2rem 0;
+  font-family: var(--main-font);
+  background-color: rgba(128, 0, 128, 0.192);
+  background-blend-mode: color-dodge;
+}
+.container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-direction: column;
+}
+
+header {
+  padding: 1rem;
+  color: white;
+  margin: 1.9rem 0;
+  text-align: center;
+}
+
+#title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+#description {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+#survey-form {
+  background: #1a1e719a;
+  color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  min-width: 450px;
+  max-width: 690px;
+  width: 50%;
+}
+
+.input-group {
+  display: flex;
+
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+
+  font-size: 1.5rem;
+}
+
+.input-group label {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.input-group.input-checkbox label,
+.input-group.input-radio label {
+  margin-bottom: 0;
+  margin-right: 1rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  min-width: 330px;
+  background: #0c23407e;
+  border: none;
+  outline: none;
+
+  text-align: center;
+  color: white;
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1.5px solid #333;
+
+  transition: opacity 0.5s ease-in-out;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  opacity: 0.8;
+  filter: grayscale(0.7);
+}
+
+#submit {
+  padding: 0.85rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.12rem;
+  width: 100%;
+  cursor: pointer;
+
+  color: white;
+  background-color: #1e2952;
+  border: 0.2rem solid #695acd79;
+  border-radius: 0.3rem;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#submit:hover,
+#submit:focus {
+  opacity: 0.8;
+  filter: brightness(150%);
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.input-group.input-dropdown select {
+  cursor: pointer;
+}
+
+.input-group.input-radio,
+.input-group.input-checkbox {
+  display: block;
+}
+
+.input-group.input-radio p,
+.input-group.input-checkbox p {
+  margin-bottom: 1rem;
+}
+.input-group.input-radio input,
+.input-group.input-checkbox input {
+  min-width: auto;
+  margin: 0.7rem;
+}
+
+@media screen and (max-width: 540px) {
+  #survey-form {
+    min-width: auto;
+    width: 100%;
+  }
+  #title {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+  }
+  .input-group {
+    font-size: 1.2rem;
+  }
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    padding: 0.7rem;
+    width: 100%;
+    min-width: auto;
+    font-size: 1.1rem;
+  }
+
+  .input-group.input-radio input,
+  .input-group.input-checkbox input {
+    min-width: auto;
+    margin: 0.7rem;
+    width: auto;
+  }
+  #submit {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+}

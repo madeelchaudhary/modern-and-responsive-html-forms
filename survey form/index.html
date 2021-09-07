@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Code Camp Challange 2 - Responsive Web Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Responsive Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+        </header>
+        <form action="" id="survey-form">
+            <div class="input-group">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="user_name" id="name" required placeholder="Enter Your Name">
+            </div>
+            <div class="input-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="user_email" id="email" required placeholder="Enter Your Email">
+            </div>
+            <div class="input-group">
+                <label for="number" id="number-label">Age</label>
+                <input type="number" name="user_age" id="number" required placeholder="Enter Your Age" min="10"
+                    max="99">
+            </div>
+            <div class="input-group input-dropdown">
+                <label for="dropdown">Which option best describes your current role?</label>
+                <select name="user_role" id="dropdown" required>
+                    <option value="" selected disabled>Select Current Role</option>
+                    <option value="full-time-job">Full Time Job</option>
+                    <option value="part-time-job">Part Time Job</option>
+                    <option value="student">Student</option>
+                    <option value="perfer-not-to-say">Prefer Not to Say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="input-group input-radio">
+                <p role="note">Would you recommend freeCodeCamp to a friend?</p>
+                <input type="radio" name="feedback" id="feedback-good" value="definitely">
+                <label for="feedback-good">Definitely</label><br />
+                <input type="radio" name="feedback" id="feedback-improve" value="maybe">
+                <label for="feedback-improve">Maybe</label><br />
+                <input type="radio" name="feedback" id="feedback-worst" value="Not Sure">
+                <label for="feedback-worst">Not Sure</label><br />
+            </div>
+            <div class="input-group input-checkbox">
+                <p role="note">What would you like to see improved?</p>
+                <input type="checkbox" name="subject" id="subject-front-end" value="front-end">
+                <label for="subject-front-end">Front-end Projects</label><br />
+                <input type="checkbox" name="subject" id="subject-back-end" value="back-end">
+                <label for="subject-back-end">Back-end Projects</label><br />
+                <input type="checkbox" name="subject" id="subject-data" value="data">
+                <label for="subject-data">Data Visualization</label><br />
+                <input type="checkbox" name="subject" id="subject-challanges" value="challanges">
+                <label for="subject-challanges">Challanges</label><br />
+                <input type="checkbox" name="subject" id="subject-forum" value="forum">
+                <label for="subject-forum">Forum</label>
+            </div>
+            <div class="input-group input-textarea">
+                <label for="user-comments">Any comments or suggestions?</label>
+                <textarea name="comments" id="user-comments" rows="4"
+                    placeholder="Enter Your comments here..."></textarea>
+            </div>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
